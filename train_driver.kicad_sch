@@ -4,6 +4,10 @@
 	(generator_version "10.0")
 	(uuid "5115b079-d0b4-45b5-a5a3-493b59e27957")
 	(paper "A4")
+	(title_block
+		(title "Train Driver ")
+		(comment 1 "A simple MCU Circuit for driving two PWM trains")
+	)
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names
