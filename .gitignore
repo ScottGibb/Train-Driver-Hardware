@@ -1,0 +1,16 @@
+# backups
+*.bak
+*.bck
+
+# autosaves
+*-autosave.kicad_sch
+*-autosave.kicad_pcb
+
+# temporary files
+*.tmp
+*.net
+*.vrml
+*.log
+
+# KiCad cache
+fp-info-cache/
