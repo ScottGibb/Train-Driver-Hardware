@@ -57,6 +57,13 @@ jobs:
                 name: erc-report
                 path: ./erc.rpt
                 if-no-files-found: warn
+
+          - name: Upload BOM
+            uses: actions/upload-artifact@v7
+            with:
+                name: bom
+                path: ./bom.csv
+                if-no-files-found: warn
         #   - name: Upload gerbers and drill file
         #     uses: actions/upload-artifact@v7
         #     with:
