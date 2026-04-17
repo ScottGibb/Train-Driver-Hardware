@@ -19,38 +19,49 @@ on:
 
 jobs:
     kicad: 
+        name: KiCad Actions
+        runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repository
-                uses: actions/checkout@v6
+          - name: Checkout Repository
+            uses: actions/checkout@v6
 
-            - name: Run KiCad actions
-                uses: actions-for-kicad/kicad-actions@v2-k10.0
-                with:
-                schematic_file_name: ./file.kicad_sch
-                symbol_libraries: "symbol-library=./symbol-library.kicad_sym"
+          - name: Run KiCad actions
+            uses: actions-for-kicad/kicad-actions@v2-k10.0
+            with:
+                schematic_file_name: ./train_driver.kicad_sch
+                symbol_libraries: "YAAJ_BluePill_Part_Like=./libraries/Kicad-STM32/Symbols/YAAJ_BluePill_Part_Like.lib"
                 run_erc: true
                 schematic_output_pdf: true
+                schematic_output_svg: true
+                schematic_output_bom: true
+                # pcb_file_name: ./file.kicad_pcb
+                # footprint_libraries: "footprint-library=./footprint-library.pretty"
+                # run_drc: true
+                # pcb_output_gerbers_and_drill: true
+                # pcb_output_image: true
 
-                pcb_file_name: ./file.kicad_pcb
-                footprint_libraries: "footprint-library=./footprint-library.pretty"
-                run_drc: true
-                pcb_output_gerbers_and_drill: true
-                pcb_output_image: true
-
-            - name: Upload schematic
-                uses: actions/upload-artifact@v7
-                with:
+          - name: Upload schematic
+            uses: actions/upload-artifact@v7
+            with:
                 path: ./schematic.pdf
-                archive: false
 
-            - name: Upload gerbers and drill file
-                uses: actions/upload-artifact@v7
-                with:
-                name: Gerbers
-                path: ./gerbers
+          - name: Upload schematic SVG
+            uses: actions/upload-artifact@v7
+            with:
+                path: ./schematic.svg
+                
+          - name: Upload ERC report
+            uses: actions/upload-artifact@v7
+            with:
+                path: ./erc.rpt
+        #   - name: Upload gerbers and drill file
+        #     uses: actions/upload-artifact@v7
+        #     with:
+        #         name: Gerbers
+        #         path: ./gerbers
 
-            - name: Upload image render
-                uses: actions/upload-artifact@v7
-                with:
-                path: ./pcb.png
-                archive: false
+        #   - name: Upload image render
+        #     uses: actions/upload-artifact@v7
+        #     with:
+        #         path: ./pcb.png
+        #         archive: false
