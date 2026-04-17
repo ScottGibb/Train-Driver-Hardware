@@ -1,5 +1,4 @@
 ---
-
 name: KiCad
 
 # Trigger mega-linter at every push. Action will also be visible from
@@ -18,62 +17,62 @@ on:
   workflow_call:
 
 jobs:
-    kicad: 
-        name: KiCad Actions
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout Repository
-            uses: actions/checkout@v6
-            with:
-                submodules: recursive
+  kicad:
+    name: KiCad Actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
 
-          - name: Run KiCad actions
-            uses: actions-for-kicad/kicad-actions@v2-k10.0
-            with:
-                schematic_file_name: ./train_driver.kicad_sch
-                symbol_libraries: "YAAJ_BluePill_Part_Like=./libraries/Kicad-STM32/Symbols/YAAJ_BluePill_Part_Like.lib,yaaj_dcdc_stepdown_lm2596=./libraries/KiCad-Chinese_Modules/DCDC_StepDown_LM2596/Symbols/yaaj_dcdc_stepdown_lm2596.lib"
-                run_erc: true
-                schematic_output_pdf: true
-                schematic_output_svg: true
-                schematic_output_bom: true
-                # pcb_file_name: ./file.kicad_pcb
-                # footprint_libraries: "footprint-library=./footprint-library.pretty"
-                # run_drc: true
-                # pcb_output_gerbers_and_drill: true
-                # pcb_output_image: true
+      - name: Run KiCad actions
+        uses: actions-for-kicad/kicad-actions@v2-k10.0
+        with:
+          schematic_file_name: ./train_driver.kicad_sch
+          symbol_libraries: "YAAJ_BluePill_Part_Like=./libraries/Kicad-STM32/Symbols/YAAJ_BluePill_Part_Like.lib,yaaj_dcdc_stepdown_lm2596=./libraries/KiCad-Chinese_Modules/DCDC_StepDown_LM2596/Symbols/yaaj_dcdc_stepdown_lm2596.lib"
+          run_erc: true
+          schematic_output_pdf: true
+          schematic_output_svg: true
+          schematic_output_bom: true
+          # pcb_file_name: ./file.kicad_pcb
+          # footprint_libraries: "footprint-library=./footprint-library.pretty"
+          # run_drc: true
+          # pcb_output_gerbers_and_drill: true
+          # pcb_output_image: true
 
-          - name: Upload schematic
-            uses: actions/upload-artifact@v7
-            with:
-                path: ./schematic.pdf
+      - name: Upload schematic
+        uses: actions/upload-artifact@v7
+        with:
+          path: ./schematic.pdf
 
-          - name: Upload schematic SVG
-            uses: actions/upload-artifact@v7
-            with:
-                path: ./schematic.svg
+      - name: Upload schematic SVG
+        uses: actions/upload-artifact@v7
+        with:
+          path: ./schematic.svg
 
-          - name: Upload ERC report
-            if: always()
-            uses: actions/upload-artifact@v7
-            with:
-                name: erc-report
-                path: ./erc.rpt
-                if-no-files-found: warn
+      - name: Upload ERC report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: erc-report
+          path: ./erc.rpt
+          if-no-files-found: warn
 
-          - name: Upload BOM
-            uses: actions/upload-artifact@v7
-            with:
-                name: bom
-                path: ./bom.csv
-                if-no-files-found: warn
-        #   - name: Upload gerbers and drill file
-        #     uses: actions/upload-artifact@v7
-        #     with:
-        #         name: Gerbers
-        #         path: ./gerbers
+      - name: Upload BOM
+        uses: actions/upload-artifact@v7
+        with:
+          name: bom
+          path: ./bom.csv
+          if-no-files-found: warn
+    #   - name: Upload gerbers and drill file
+    #     uses: actions/upload-artifact@v7
+    #     with:
+    #         name: Gerbers
+    #         path: ./gerbers
 
-        #   - name: Upload image render
-        #     uses: actions/upload-artifact@v7
-        #     with:
-        #         path: ./pcb.png
-        #         archive: false
+    #   - name: Upload image render
+    #     uses: actions/upload-artifact@v7
+    #     with:
+    #         path: ./pcb.png
+    #         archive: false
