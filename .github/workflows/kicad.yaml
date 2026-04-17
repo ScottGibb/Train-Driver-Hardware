@@ -24,6 +24,8 @@ jobs:
         steps:
           - name: Checkout Repository
             uses: actions/checkout@v6
+            with:
+                submodules: recursive
 
           - name: Run KiCad actions
             uses: actions-for-kicad/kicad-actions@v2-k10.0
