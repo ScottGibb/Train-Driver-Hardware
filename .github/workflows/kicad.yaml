@@ -46,11 +46,6 @@ jobs:
         with:
           path: ./schematic.pdf
 
-      - name: Upload schematic SVG
-        uses: actions/upload-artifact@v7
-        with:
-          path: ./schematic.svg
-
       - name: Upload ERC report
         if: always()
         uses: actions/upload-artifact@v7
