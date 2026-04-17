@@ -1,3 +1,6 @@
 [submodule "libraries/Kicad-STM32"]
 	path = libraries/Kicad-STM32
 	url = https://github.com/erichelgeson/Kicad-STM32.git
+[submodule "libraries/KiCad-Chinese_Modules"]
+	path = libraries/KiCad-Chinese_Modules
+	url = https://github.com/yet-another-average-joe/KiCad-Chinese_Modules.git
