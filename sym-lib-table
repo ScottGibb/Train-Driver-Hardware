@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "YAAJ_BluePill_Part_Like")(type "Legacy")(uri "${KIPRJMOD}/libraries/Kicad-STM32/Symbols/YAAJ_BluePill_Part_Like.lib")(options "")(descr "BluePill STM32 symbol library"))
+  (lib (name "yaaj_dcdc_stepdown_lm2596")(type "Legacy")(uri "${KIPRJMOD}/libraries/KiCad-Chinese_Modules/DCDC_StepDown_LM2596/Symbols/yaaj_dcdc_stepdown_lm2596.lib")(options "")(descr "LM2596 step-down symbol library"))
+)
