@@ -51,9 +51,12 @@ jobs:
                 path: ./schematic.svg
 
           - name: Upload ERC report
+            if: always()
             uses: actions/upload-artifact@v7
             with:
+                name: erc-report
                 path: ./erc.rpt
+                if-no-files-found: warn
         #   - name: Upload gerbers and drill file
         #     uses: actions/upload-artifact@v7
         #     with:
