@@ -2,7 +2,6 @@
 
 ## 1.0.0 (2026-04-17)
 
-
 ### Features
 
 * add .gitignore and remove .history ([96978ef](https://github.com/ScottGibb/Train-Driver-Hardware/commit/96978ef53d10b761abd279a33f05de4240df8b04))
@@ -15,7 +14,6 @@
 * removing led pwm circuitry ([3766fef](https://github.com/ScottGibb/Train-Driver-Hardware/commit/3766fefd6cb783bdba5cc7d9d2ba4970dd99546d))
 * **simulation:** add placeholder simulator docs ([ffa6c3f](https://github.com/ScottGibb/Train-Driver-Hardware/commit/ffa6c3fb6961e5c5b05bd65bca75bdd6b8dbd69a))
 * Train Driver Duble Inverting Transisters ([1b19ba9](https://github.com/ScottGibb/Train-Driver-Hardware/commit/1b19ba98d68ae9d2e90f529e5b7eb4b22be2df64))
-
 
 ### Bug Fixes
 
