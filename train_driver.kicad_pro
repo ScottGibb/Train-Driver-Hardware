@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "See GitHub"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -244,7 +244,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|1955800|1155700|e68c2578-614f-4f8c-a694-572b4f178b2f|00000000-0000-0000-0000-000000000000|/5115b079-d0b4-45b5-a5a3-493b59e27957|/5115b079-d0b4-45b5-a5a3-493b59e27957|",
+        "This is driver from the diodes "
+      ],
+      [
+        "power_pin_not_driven|342900|1638300|a07c0a7c-bcea-4603-bd9f-bf60de8b0c98|00000000-0000-0000-0000-000000000000|/5115b079-d0b4-45b5-a5a3-493b59e27957|/5115b079-d0b4-45b5-a5a3-493b59e27957|",
+        "This is a GND Pin"
+      ],
+      [
+        "power_pin_not_driven|342900|1663700|cf555ba7-6452-4fa9-ad6a-ff7590915cdf|00000000-0000-0000-0000-000000000000|/5115b079-d0b4-45b5-a5a3-493b59e27957|/5115b079-d0b4-45b5-a5a3-493b59e27957|",
+        "This is a 3v3 Pin"
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -644,6 +657,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -656,7 +677,7 @@
         "uuid": "5115b079-d0b4-45b5-a5a3-493b59e27957"
       }
     ],
-    "used_designators": "",
+    "used_designators": "J5,#PWR7-8,D1-3",
     "variants": []
   },
   "sheets": [
