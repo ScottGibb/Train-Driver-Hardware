@@ -1,6 +1,6 @@
 ---
 
-name: MegaLinter
+name: KiCad
 
 # Trigger mega-linter at every push. Action will also be visible from
 # Pull Requests to main
@@ -49,7 +49,7 @@ jobs:
             uses: actions/upload-artifact@v7
             with:
                 path: ./schematic.svg
-                
+
           - name: Upload ERC report
             uses: actions/upload-artifact@v7
             with:
