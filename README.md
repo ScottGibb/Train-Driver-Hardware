@@ -21,7 +21,7 @@ A full bridge rectifier is also used, to which a snippet is also shown below:
 
 ## Falstad Simulation
 
-[Falstad](https://www.falstad.com/circuit/circuitjs.html) was also used to simulate parts of the circuit, the simulations can be found in `.txt` format in the [simulations](./simulations/) folder/
+[Falstad](https://www.falstad.com/circuit/circuitjs.html) was also used to simulate parts of the circuit, the simulations can be found in `.txt` format in the [simulations](./simulations/) folder.
 
 ## Bill of Materials
 
