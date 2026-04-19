@@ -23,6 +23,16 @@ A full bridge rectifier is also used, to which a snippet is also shown below:
 
 [Falstad](https://www.falstad.com/circuit/circuitjs.html) was also used to simulate parts of the circuit, the simulations can be found in `.txt` format in the [simulations](./simulations/) folder.
 
+We can see the circuits below:
+
+### Recitifier Simulation
+
+![Rectifier Simulation](./docs/rectifier_falstad_simulation.png)
+
+### PWM Channel Simulation
+
+![FET Driver Simulation](./docs/fet_driver_falstad_simulation.png)
+
 ## Bill of Materials
 
 The Bill of Materials can be found in the GitHub releases, which is created automatically by the [Kicad GitHub Actions workflow](./.github/workflows/kicad.yaml).
