@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/ScottGibb/Train-Driver-Hardware/compare/v1.0.0...v1.1.0) (2026-04-19)
+
+
+### Features
+
+* add codeowners ([f60e252](https://github.com/ScottGibb/Train-Driver-Hardware/commit/f60e2523258b2e226f849f47fe792061c0fb5a35))
+* Add simulations ([216cbce](https://github.com/ScottGibb/Train-Driver-Hardware/commit/216cbcee9a1f69f3642807270e0ff64c0e452567))
+
+
+### Bug Fixes
+
+* **docs:** badges ([37aabdc](https://github.com/ScottGibb/Train-Driver-Hardware/commit/37aabdc427dfcf5fde92f356034aa2a1d31a0c7f))
+* **docs:** readme ([ddb4ee9](https://github.com/ScottGibb/Train-Driver-Hardware/commit/ddb4ee9df61f80b56a8abc320f9e9ff25d5ecdcd))
+
 ## 1.0.0 (2026-04-17)
 
 ### Features
