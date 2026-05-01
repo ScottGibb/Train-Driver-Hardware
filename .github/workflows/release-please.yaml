@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate KiCad release outputs
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions-for-kicad/kicad-actions@v2-k10.0
+        uses: actions-for-kicad/kicad-actions@v2-k10.0.1
         with:
           schematic_file_name: ./train_driver.kicad_sch
           symbol_libraries: "YAAJ_BluePill_Part_Like=./libraries/Kicad-STM32/Symbols/YAAJ_BluePill_Part_Like.lib,yaaj_dcdc_stepdown_lm2596=./libraries/KiCad-Chinese_Modules/DCDC_StepDown_LM2596/Symbols/yaaj_dcdc_stepdown_lm2596.lib"
